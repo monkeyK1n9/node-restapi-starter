@@ -37,6 +37,7 @@ class AuthController {
       const token: string = jwt.sign(tokenInfo, "secret", {
         expiresIn: EXPIRES,
       });
+      // console.log(token)
       return res.json({ user, token });
     } catch (error) {
       console.log(error);
